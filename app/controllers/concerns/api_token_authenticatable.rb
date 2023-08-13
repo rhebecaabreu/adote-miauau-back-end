@@ -31,6 +31,8 @@ module ApiTokenAuthenticatable
     request_email = request.headers.env["HTTP_#{header_name(model)}_EMAIL"].presence
     request_token = request.headers.env["HTTP_#{header_name(model)}_TOKEN"].presence
 
+    Rails.logger.info("\n\n INFO ---- #{request.headers.env} \n\n ")
+
     user = request_email && model.find_by(email: request_email)
     [user, request_token]
   end
