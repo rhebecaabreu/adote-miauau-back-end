@@ -8,5 +8,6 @@ class Pet < ApplicationRecord
   enumerize :status, in: [:looking_home, :found_home], default: :looking_home
   enumerize :kind, in: [:dog, :cat], default: :cat
   enumerize :size, in: [:small, :medium, :big], default: :small
+  enumerize :sex, in: [:male, :female, :undefined], default: :female
 
 end
