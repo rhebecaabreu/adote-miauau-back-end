@@ -28,10 +28,8 @@ module ApiTokenAuthenticatable
   end
 
   def find_authenticable_by_headers(model)
-    request_email = request.headers.env["HTTP_#{header_name(model)}_EMAIL"].presence
-    request_token = request.headers.env["HTTP_#{header_name(model)}_TOKEN"].presence
-
-    Rails.logger.info("\n\n INFO ---- #{request.headers.env} \n\n ")
+    request_email = request.headers["HTTP_#{header_name(model)}_EMAIL"].presence
+    request_token = request.headers["HTTP_#{header_name(model)}_TOKEN"].presence
 
     user = request_email && model.find_by(email: request_email)
     [user, request_token]
