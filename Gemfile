@@ -29,6 +29,7 @@ gem "jbuilder"
 
 gem 'devise'
 gem 'enumerize'
+gem 'rack-cors'
 
 # Image upload
 gem 'carrierwave'
