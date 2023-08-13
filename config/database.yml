@@ -49,8 +49,7 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["MYSQL_URL"] %>
   host: <=% ENV["MYSQLHOST"] %>
-  database: railway
+  database: adote_miauau_production
   username: root
   password: <%= ENV["MYSQLPASSWORD"] %>
