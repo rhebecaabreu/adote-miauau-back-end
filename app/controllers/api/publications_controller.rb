@@ -2,7 +2,7 @@ class Api::PublicationsController < ApplicationController
   before_action :authenticate_user_from_token!, except: [:index]
 
   def index
-    publications = Publication.all
+    publications = Publication.all.order(created_at: :desc)
 
     render_success(publications)
   end
