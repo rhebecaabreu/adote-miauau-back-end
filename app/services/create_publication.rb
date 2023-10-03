@@ -45,8 +45,8 @@ class CreatePublication
   def create_pet(publication)
     Pet.create!(
       publication: publication, kind: pet_params[:kind], age: pet_params[:age],
-      vaccinated: to_b(pet_params[:vaccinated]), castrated: to_b(pet_params[:castrated]),
-      vermifugated: to_b(pet_params[:vermifugated]), coat_color: pet_params[:coat_color],
+      vaccinated: pet_params[:vaccinated], castrated: pet_params[:castrated],
+      vermifugated: pet_params[:vermifugated], coat_color: pet_params[:coat_color],
       status: pet_params[:status], size: pet_params[:size]
     )
   end
@@ -55,10 +55,6 @@ class CreatePublication
     publication_params[:images].each do |key, image|
       Image.create!(file: image, imageable: pet)
     end
-  end
-
-  def to_b(obj)
-    obj.to_s === "true"
   end
 
 end
