@@ -9,8 +9,8 @@ class User < ApplicationRecord
   enumerize :role, in: [:protector, :ong], default: :protector
   enumerize :permissions, in: [:common, :admin], default: :common
 
-  has_many :publications
-  has_one :address, as: :addressable
+  has_many :publications, dependent: :destroy
+  has_one :address, as: :addressable, dependent: :destroy
 
 end
 
