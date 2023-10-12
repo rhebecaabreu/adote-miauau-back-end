@@ -47,7 +47,7 @@ class CreatePublication
       publication: publication, kind: pet_params[:kind], age: pet_params[:age],
       vaccinated: pet_params[:vaccinated], castrated: pet_params[:castrated],
       vermifugated: pet_params[:vermifugated], coat_color: pet_params[:coat_color],
-      status: pet_params[:status], size: pet_params[:size]
+      status: pet_params[:status], size: pet_params[:size], sex: pet_params[:sex]
     )
   end
 
