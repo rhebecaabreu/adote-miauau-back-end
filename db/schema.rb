@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_12_230926) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_13_011958) do
   create_table "addresses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "state"
     t.string "city"
@@ -43,9 +43,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_12_230926) do
   create_table "pets", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "kind"
     t.string "age"
-    t.boolean "vaccinated"
-    t.boolean "castrated"
-    t.boolean "vermifugated"
+    t.string "vaccinated"
+    t.string "castrated"
+    t.string "vermifugated"
     t.string "coat_color"
     t.string "status"
     t.string "size"

@@ -6,7 +6,6 @@ class Pet < ApplicationRecord
   has_many :images, as: :imageable
 
   validates :kind, :age, :coat_color, :status, :size, :sex, presence: true
-  # validates :vaccinated, :castrated, :vermifugated, inclusion: [true, false]
 
   enumerize :status, in: [:looking_home, :found_home], default: :looking_home
   enumerize :kind, in: [:dog, :cat], default: :cat
