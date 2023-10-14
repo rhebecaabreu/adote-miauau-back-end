@@ -1,24 +1,32 @@
-# README
+# Adote Miauau
+Este projeto é uma aplicação web desenvolvida para o Projeto Integrado do curso de Pós-Graduação em Engenharia de Software da Puc Minas.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+O Adote Miauau é um site voltado para publicação de animais para doação, divulgar animais encontrados ou que foram perdidos. O principal objetivo é ajudar ONGs e protetores a encontrarem um lar para os animais, em especial gatos e cães.
 
-Things you may want to cover:
+## Como acessar
+É possível acessar a aplicação em https://adote-miauau-front-end-rhebecaabreu.vercel.app/ ou https://www.adotemiauau.com.br/
 
-* Ruby version
+### API 
 
-* System dependencies
+A API está disponível na URL: https://api.adotemiauau.com.br/api/
 
-* Configuration
+#### Endpoints 
+- `POST` /users  - Criar usuários - necessário passar os atributos no body
+-  `POST` /users/sign_in - Realizar login - necessário passar email e password
+- `GET` /categories - Pegar lista de categorias
+-  `GET` /publications - Pegar lista de publicações - é possível aplicar os filtros: `kind=${kindFilter}&category=${selectedCategory}`
 
-* Database creation
+## Tecnologias
+- Ruby on Rails
+- Ruby
+- MySQL
+- Digital Ocean - hospedagem
 
-* Database initialization
+### Como rodar localmente 
+- Fazer o setup local do framework - é possível seguir [esse](https://gorails.com/setup/ubuntu/22.04) tutorial 
+- Clonar o repositório
+- Rodar `bundle install` para instalar as dependencias do projeto
+- Rodar `rails s` para rodar
+O projeto ficará acessível em http://localhost:3000
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Se estiver rodando com o front-end, lembre de levantar a API primeiro e depois o front-end na porta 3001. 
