@@ -13,30 +13,33 @@ A API está disponível na URL: https://api.adotemiauau.com.br/api/
 #### Endpoints 
 - `POST` /users  - Criar usuários - necessário passar os atributos no body
 ```json
- {
-  title: "",
-  description: "",
-  category_id: 1,
-  images: [],
-  pet: {
-    kind: "cat",
-    sex: "female",
-    age: "0 a 6 meses",
-    vaccinated: "yes",
-    castrated: "yes",
-    vermifugated: "yes",
-    coat_color: "branca",
-    status: "",
-    size: "small",
+{
+  "title":"",
+  "description":"",
+  "category_id":1,
+  "images":[
+    
+  ],
+  "pet":{
+    "kind":"cat",
+    "sex":"female",
+    "age":"0 a 6 meses",
+    "vaccinated":"yes",
+    "castrated":"yes",
+    "vermifugated":"yes",
+    "coat_color":"branca",
+    "status":"",
+    "size":"small"
   },
-  address: {
-    state: "",
-    city: "",
-    cep: "",
-    number: "",
-    street: "",
-    complement: "",
-  },
+  "address":{
+    "state":"",
+    "city":"",
+    "cep":"",
+    "number":"",
+    "street":"",
+    "complement":""
+  }
+}
 ```
 
 -  `POST` /users/sign_in - Realizar login - necessário passar `email` e `password`
